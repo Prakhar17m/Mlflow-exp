@@ -1,0 +1,82 @@
+# Mlflow
+mlflow use to control models , make them in decipline
+
+if we have 10 modes which we run them 50 runs and after 5 days
+we want to know which model performs best
+
+- we will go to jupyter nootbook and check but it will take so much time
+- here comes mlflow it is a system that remembers everything about your ml model experements automatically
+
+
+- before mlflow
+   -- the experiments are scattered and stored in the notebooks like jupyter
+   -- no history of what worked
+   -- can not reproduce the results
+   -- no idea which model is deployed
+   -- no rollback in production model fails
+
+- after mlflow  --mlflow tracks
+   -- which data is used
+   -- which parameters and metrices are used
+   -- which model fits and belongs to which experiments
+   -- google drive + excel + git
+
+- traditional way
+   -- excel, nootbook
+   -- manual
+   -- file naming convention
+   -- manual accounting
+   --problem--humans error, not scalable, not collaborative , not production safe
+
+- mlfow automatically
+   -- saves experiments
+   -- store the experiments and metrices 
+   -- keeps model versions
+   -- shows comperison UI
+   -- all the process were automated
+
+
+# Mlflow architecture
+- mlflow manages the full journey of a ml model from the experiments to the production level
+- manage the models journey with 4 parts
+  1. mlflow tracking
+      -- diary of experiments 
+      -- tracks the models and store the paraments and metrices used 
+      -- store artifacts
+  2. mlflow projects
+      -- it is like the reciepe book
+      -- ensures that we have the same version , same liberary and extentions 
+  3. mlflow models
+      -- it isi like the packing the dish
+      -- packs the train model & can be load and predict
+  4. mlflow registery model
+      -- here we works on the QA
+      -- keeps different versions of our model 
+      -- and also keep delopment control
+        dev--> staging-->production
+        idea-->dish--->exper-->dish-->recipe--->kitchen-->packing-->QA
+- ml experiments are store,  and ensure that our exp will work properly independent if machine or system , then after that we can make our model deployemnt ready , at last stage we do QA deployment controlling
+
+---track----reprode---pack----approval
+ 
+# Use cases
+ -tracking experiments
+ -compare model
+ -improve accuracy
+ -register best model
+ -version model
+ -load model in api
+ -automate pipeline
+ -control deployments 
+ -rollback bad models
+
+# Implementation
+
+
+# Mlflow hyperparameter tuning
+
+
+# Mlflow with DagsHub
+
+
+# Mlflow Model Registry
